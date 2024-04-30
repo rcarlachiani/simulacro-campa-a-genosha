@@ -56,14 +56,11 @@ function Count({ date, selectedDate, selectedHour }) {
   const selectedDay = selectedDate
   const selectedSchedule = selectedHour
 
-
   return (
     <section
-      className="flex items-center flex-col h-full min-h-screen bg-center bg-cover h-full min-h-screen w-screen bg-white/50 "
-      style={{ backgroundImage: "url(/images/wall.png)" }}
+      className="flex items-center flex-col h-full min-h-screen h-full min-h-screen"
     >
-  
-      <div id="header" className="flex items-center justify-center flex-row ">
+      <div id="header" className="flex items-center justify-center flex-row">
         <div className="pt-24 md:pt-16 xl:pt-16">
           <h1 className="font-Montserrat text-center leading-none text-white font-bold text-[32px] md:text-[52px] xl:text-[52px] xxl:text-[52px]">
             Su turno es el día
@@ -71,12 +68,10 @@ function Count({ date, selectedDate, selectedHour }) {
           <p className="font-normal text-center text-yellow font-bold text-[32px] md:text-[42px] xl:text-[42px] xxl:text-[42px]">
             {selectedDay} a las {selectedSchedule}
           </p>
-          <br/>
+          <br />
         </div>
       </div>
-
       <h2 className="font-Montserrat text-center leading-none text-white font-bold text-[25px] md:text-[30px] xl:text-[30px] xxl:text-[30px]">FALTAN:</h2>
-
       <div className="mt-2">
         <Countdown
           date={date}
@@ -85,17 +80,14 @@ function Count({ date, selectedDate, selectedHour }) {
           }}
         />
       </div>
-
       <h2 className="mt-8 font-Montserrat text-center leading-none text-white font-bold text-[25px] md:text-[30px] xl:text-[30px] xxl:text-[30px]">¡Te esperamos!</h2>
-      
       <Link href='/'>
         <div className="mt-5 flex items-center justify-center">
-            <button type="submit" className="text-white bg-lightgreen font-Montserrat font-bold my-3 py-3 px-10 border border-lightgreen rounded-full flex flex-col justify-content align-content-center items-center">
-                REGISTRAR OTRO TURNO
-            </button>
+          <button type="submit" className="text-white bg-lightgreen font-Montserrat font-bold my-3 py-3 px-10 border border-lightgreen rounded-full flex flex-col justify-content align-content-center items-center">
+            REGISTRAR OTRO TURNO
+          </button>
         </div>
       </Link>
-      
     </section>
   );
 }
